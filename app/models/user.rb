@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   after_create :welcome_send
- 
+  
+  has_many :topics
+  
   private
  
   def welcome_send

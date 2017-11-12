@@ -1,0 +1,12 @@
+<h1>BlocMarks by Topic</h1>
+
+<% @topics.each do |topic| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to topic.title, topic %>
+          <%= render topic.bookmarks %>
+      </h4>
+    </div>
+  </div>
+<% end %>
