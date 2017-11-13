@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   after_create :welcome_send
   
   has_many :topics
-  
+  has_many :bookmarks
+
   private
  
   def welcome_send

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
-  resources :topics
-  
+  resources :topics do
+     resources :bookmarks, except: [:index]
+  end
+
   get 'about' => 'welcome#about'
   
   get 'users' => 'welcome#index'
