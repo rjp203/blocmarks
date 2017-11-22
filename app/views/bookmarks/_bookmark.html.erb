@@ -1,0 +1,16 @@
+<% @topics.each do |topic| %>
+  <div class="media">
+    <div class="media-body">
+      <h3 class="media-heading">
+        <%= link_to topic.title, topic %></br>
+      </h3>
+        <h4 class="media-heading">
+          <% topic.bookmarks.each do |bookmark| %>
+            <%= link_to bookmark.url, 
+              if bookmark.url.include? "http://" or bookmark.url.include? "https://" then bookmark.url else "http://" + bookmark.url end, 
+              target: :_blank %></br>
+          <% end %>
+        </h4>      
+    </div>
+  </div>
+<% end %>
