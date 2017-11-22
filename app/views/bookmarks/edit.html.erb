@@ -4,7 +4,7 @@
   <div class="col-md-8">
     <%= form_for [@bookmark.topic, @bookmark] do |f| %>
       <div class="form-group">
-        <%= f.label :url %>
+        <%= f.label :url, "URL" %>
         <%= f.text_field :url, class: 'form-control', placeholder: "Enter New BlocMark URL" %>
       </div>
       <div class="form-group">

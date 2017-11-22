@@ -40,5 +40,18 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.action_mailer.default_url_options = { :host => 'https://blocmarks-rjp203.c9users.io' }
+  
+  config.web_console.whiny_requests = false
 
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #     :address              => 'smtp.mailgun.org',
+  #     :port                 => '587',
+  #     :authentication       => :plain,
+  #     :user_name            => ENV['MAILGUN_USERNAME'],
+  #     :password             => ENV['MAILGUN_PASSWORD'],
+  #     :domain               => 'heroku.com',
+  #     :content_type         => 'text/html'
+  # }
+  
 end

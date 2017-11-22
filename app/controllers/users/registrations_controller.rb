@@ -43,7 +43,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
   
   private
-
+  
   def configure_sign_up_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
@@ -51,4 +51,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def configure_account_update_params
     params.require(:user).permit(:email, :password, :password_confirmation, :current_password)
   end
+
 end

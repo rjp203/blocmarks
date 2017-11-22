@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
   
+  post :incoming, to: 'incoming#create'
+
+  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
+
   resources :topics do
      resources :bookmarks, except: [:index]
   end
-
+  
   get 'about' => 'welcome#about'
   
-  get 'users' => 'welcome#index'
+  get 'users' => 'topics#index'
   
   root 'topics#index'
   
-  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
